@@ -1,4 +1,4 @@
-module github.com/walkersumida/prettyout/v1
+module github.com/walkersumida/prettyout
 
 go 1.17
 
