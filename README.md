@@ -18,9 +18,8 @@ import (
 )
 
 func TestProfile(t *testing.T) {
-	expected := "Walker Sumida"
-
 	t.Run("english fullname", func(t *testing.T) {
+		expected := "Walker Sumida"
 		got := "ウォーカー スミダ"
 		if got != expected {
 			t.Errorf(p.Serror(expected, got)) // <- call
