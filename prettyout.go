@@ -1,13 +1,14 @@
 package prettyout
 
 import (
-	"testing"
+	"fmt"
 
 	"github.com/google/go-cmp/cmp"
 )
 
-func Error(t *testing.T, expected, got interface{}, opts ...cmp.Option) {
+func Serror(expected, got interface{}, opts ...cmp.Option) string {
 	if diff := cmp.Diff(expected, got, opts...); diff != "" {
-		t.Errorf("\n-expected +got: \n%s", diff)
+		return fmt.Sprintf("\n-expected +got: \n%s", diff)
 	}
+	return ""
 }
