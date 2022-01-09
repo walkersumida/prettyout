@@ -14,7 +14,7 @@ package jaker
 import (
 	"testing"
 
-	"github.com/walkersumida/prettyout" // <-
+	"github.com/walkersumida/prettyout" // <- add
 )
 
 func TestProfile(t *testing.T) {
@@ -23,7 +23,7 @@ func TestProfile(t *testing.T) {
 	t.Run("english fullname", func(t *testing.T) {
 		got := "ウォーカー スミダ"
 		if got != expected {
-			t.Errorf(prettyout.Serror(expected, got)) // <-
+			t.Errorf(prettyout.Serror(expected, got)) // <- call
 		}
 	})
 }
